@@ -1,0 +1,100 @@
+body {
+  color: #E60EC9;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 6vmin;
+}
+
+.heading,
+.piagg {
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+.confetti {
+  height: 100vh;
+  max-width: 100vw;
+  position: absolute;
+  top: 0;
+  width: auto;
+  z-index: 4;
+  animation: 4s ease 0s 1 confetti-in;
+}
+
+.confetti,
+.lauren-cake {
+  left: 0;
+  margin: auto;
+  right: 0;
+}
+
+.lauren-cake {
+  height: 50vmin;
+  max-width: 1000px;
+  position: relative;
+  transform: translateY(1em);
+  width: 80vmin;
+}
+
+.cake-front,
+.cake-back {
+  position: absolute;
+  top: 0;
+}
+
+.cake-front {
+  z-index: 3;
+}
+
+.cake-back {
+  z-index: 1;
+}
+
+.piagg {
+  animation: 10s linear 3s infinite piagg-orbit;
+  font-size: .5em;
+  left: 25vmin;
+  position: absolute;
+  top: 20vmin;
+}
+
+.lauren {
+  animation: 3s ease-in-out 0s 1 pop-out-of-cake;
+  left: 25%;
+  position: absolute;
+  transform: translateY(-25%);
+  width: 50%;
+  z-index: 2;
+}
+
+@keyframes pop-out-of-cake {
+  0% {
+    transform: translateY(36%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes piagg-orbit {
+  from {
+    transform: rotate(0deg) translateX(40vmin) rotate(90deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(40vmin) rotate(90deg);
+  }
+}
+
+@keyframes confetti-in {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
